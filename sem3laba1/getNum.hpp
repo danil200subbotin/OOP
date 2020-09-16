@@ -13,6 +13,12 @@
 //#include <limits>
 #endif /* getNum_hpp */
 
-//template <class T>
+template <class T>
 
-int  getNum (int a);
+int  getNum (T &a) {
+    std::cin.clear();
+    std::cin >> a;
+    if (!std::cin.good())
+        return 1;
+    return 0;
+}

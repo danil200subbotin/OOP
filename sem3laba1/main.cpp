@@ -20,17 +20,14 @@ int main() {
     Table* table;
     table = new Table;
     table->first = nullptr;
-    std::cout << "Please, enter table size\n" << std::endl;
+    std::cout << std::endl << "Please, enter table size" << std::endl;
     int a = 0, b = 0, i = 1;
- /*   while (i == 1) {
-        i = getNum(a);
-    }
+    i = getNum(a);
+    if (i != 0) std::cout << "Вы ввели неприемлимое значение"<< std::endl;
     i = 1;
-    while (i == 1) {
-        i = getNum(b);
-    }
-    */
-    std::cin >> a >> b;
+    i = getNum(b);
+    if (i != 0) std::cout << "Вы ввели неприемлимое значение"<< std::endl;
+    //std::cin >> a >> b;
     table->a = a;
     table->b = b;
     int (*func[])(Table*) = {nullptr, create, draw, sort, deletion};
